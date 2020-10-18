@@ -13,10 +13,20 @@
           <img src="res/images/logo.png" alt="postIt">
         </div>
         <div class="search-container">
-          <input type="text" name="search"><button type="button">Search</button>
+          <label>
+            <input type="text" name="search">
+          </label>
+          <button type="button">Search</button>
         </div>
         <div class="avatar-container">
-          <img src="res/images/avatar.png" class="avatar" alt="Me">
+          <input id="avatarIco" onclick="dropDownClicked()" type="image" src="res/images/avatar.png" class="avatar" alt="Me"/>
+
+          <div id="profileDropdown" class="dropdown-content">
+            <h3 id="nameUser"></h3>
+            <h3 id="emailUser"></h3>
+            <a href="browse.html">Browse</a>
+            <a href="login.html">Logout</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -76,5 +86,6 @@
       </div>
 
     </section>
+    <script src="res/js/index.js"></script>
   </body>
 </html>
