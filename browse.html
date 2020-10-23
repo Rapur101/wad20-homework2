@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="res/css/style.css">
     <title>Welcome to postIt! Please Log In</title>
-  </head>
-  <body>
-	  <header>
-		<nav>
-			<div class="logo-container">
-				<img src="res/images/logo.png" alt="postIt">
-			</div>
-			<div class="search-container">
-				<input type="text" name="search">
-				<button type="button">Search</button>
-			</div>
-			<div class="avatar-container">
-				<input id="avatarIco" type="image" src="res/images/avatar.png" class="avatar"
-					   alt="Me"/>
+</head>
 
-				<div id="profileDropdown" class="dropdown-content">
-					<h3 id="nameUser"></h3>
-					<h3 id="emailUser"></h3>
-					<hr>
-					<a href="index.html">Home</a>
-					<a href="login.html">Logout</a>
-				</div>
-			</div>
-		</nav>
-	</header>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="res/images/logo.png" alt="postIt">
+            </div>
+            <div class="search-container">
+                <input type="text" name="search">
+                <button type="button">Search</button>
+            </div>
+            <div class="avatar-container">
+                <input id="avatarIco" type="image" src="res/images/avatar.png" class="avatar" alt="Me" />
+
+                <div id="profileDropdown" class="dropdown-content">
+                    <h3 id="nameUser"></h3>
+                    <h3 id="emailUser"></h3>
+                    <hr>
+                    <a href="index.html">Home</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <section class="browse">
-      <section class="browse-inner">
-        <div class="browse-users"></div>
-      </section>
+        <section class="browse-inner">
+            <div class="browse-users"></div>
+        </section>
     </section>
-  </body>
-  	<script src="res/js/index.js"></script>
+</body>
+<script src="res/js/index.js"></script>
+
 </html>
