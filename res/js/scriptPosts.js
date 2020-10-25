@@ -1,27 +1,3 @@
-//Task 1
-$("#avatarIco").click(function() {
-    $("#profileDropdown").toggle()
-});
-
-$("body").click(function(event) {
-    const target = $(event.target);
-    if (!target.parents().is(".dropdown-content") && !target.is(".dropdown-content") && !target.is(".avatar")) {
-        $(".dropdown-content").hide();
-    }
-});
-
-$.getJSON("https://private-anon-2f317f3893-wad20postit.apiary-mock.com/users/1", function(response) {
-    const user = response;
-    $("#nameUser").text(user.firstname + " " + user.lastname);
-    $("#emailUser").text(user.firstname + " " + user.email);
-    $("#avatarIco").attr("src", user.avatar);
-}).fail(function() {
-    console.log("Failed to fetch user information!");
-})
-
-
-
-
 //Task 2
 
 const displayPosts = function(data) {
@@ -69,41 +45,4 @@ $.getJSON("https://private-anon-a878d01bcd-wad20postit.apiary-mock.com/posts", f
     displayPosts(response);
 }).fail(function() {
     console.log("Failed to fetch posts!");
-})
-
-
-
-//Task 3
-
-const displayUsers = function(data) {
-    const users = $('.browse-users');
-
-    for (element of data) {
-        const user = $('<div class="browse-user"></div>');
-        const avatar = $(`<div class="browse-image-container"><img src="${element.avatar}"></div>`);
-        const name = $(`<p class="browse-user-text">${element.firstname} ${element.lastname}</p>`);
-        const button = $('<button class="browse-follow-button">Follow</button>');
-        users.prepend(user);
-        user.prepend(avatar);
-        user.append(name);
-        user.append(button);
-    };
-
-    $('.browse-follow-button').click(function() {
-        const button = $(this);
-
-        if (button.hasClass('was-pressed')) {
-            button.removeClass('was-pressed');
-            button.text('Follow');
-        } else {
-            button.addClass('was-pressed');
-            button.text('Followed');
-        }
-    });
-}
-
-$.getJSON("https://private-anon-4dfe848681-wad20postit.apiary-mock.com/profiles", function(response) {
-    displayUsers(response);
-}).fail(function() {
-    console.log("Failed to fetch users!");
 })
