@@ -15,6 +15,8 @@ $.getJSON("https://private-anon-2f317f3893-wad20postit.apiary-mock.com/users/1",
     $("#nameUser").text(user.firstname + " " + user.lastname);
     $("#emailUser").text(user.firstname + " " + user.email);
     $("#avatarIco").attr("src", user.avatar);
+}).fail(function() {
+    console.log("Failed to fetch user information!");
 })
 
 
@@ -65,6 +67,8 @@ const displayPosts = function(data) {
 
 $.getJSON("https://private-anon-a878d01bcd-wad20postit.apiary-mock.com/posts", function(response) {
     displayPosts(response);
+}).fail(function() {
+    console.log("Failed to fetch posts!");
 })
 
 
@@ -100,4 +104,6 @@ const displayUsers = function(data) {
 
 $.getJSON("https://private-anon-4dfe848681-wad20postit.apiary-mock.com/profiles", function(response) {
     displayUsers(response);
+}).fail(function() {
+    console.log("Failed to fetch users!");
 })
